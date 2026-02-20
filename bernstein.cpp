@@ -40,23 +40,18 @@ int main(){
     cout << "Ingrese y: ";
     cin >> y;
 
-    // S1
     thread h1(S1);
     h1.join();
 
-    // S2 depende de S1
     thread h2(S2);
     h2.join();
 
-    // S3 depende de S2
     thread h3(S3);
     h3.join();
 
-    // S4 depende de S1, S2, S3
     thread h4(S4);
     h4.join();
 
-    // S5 depende de S3 y S4
     thread h5(S5);
     h5.join();
 
